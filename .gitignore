@@ -1,2 +1,5 @@
 #Remove os arquivos SQL utilizados para criação e consulta do DB local
 *.sql
+
+#Proteção de credenciais
+*.env
