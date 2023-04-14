@@ -1,3 +1,6 @@
+<?php
+    include('./controller/services/login.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +13,7 @@
     <h1>Bem vindo!</h1>
     <p>Para continuar realize seu Login.</p>
 
-    <form method="post" action="">
+    <form method="post" action="./controller/services/login.php">
         <label for="email">Email: </label>
         <input type="email" id="email" name="email" placeholder="email@exemple.com">
         <label for="pass">Senha: </label>
