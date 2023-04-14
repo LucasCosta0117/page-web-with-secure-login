@@ -1,12 +1,14 @@
 <?php
-    $hostname = $_ENV['HOSTNAME'];
-    $username = $_ENV['USERNAME'];
-    $password = $_ENV['PASSWORD'];
-    $database = $_ENV['DATABASE'];
+    require '../../global.php';
+    
+    $hostname = getenv('HOSTNAME');
+    $username = getenv('USERNAME');
+    $password = getenv('PASSWORD');
+    $database = getenv('DATABASE');
 
-    $mysqli = new mysqli($hostname, $username, $password, $database);
-
-    if($mysqli -> error){
-        die("Falha ao conectar-se com o banco de dados: ". $mysqli->error);
+    try {
+        $mysqli = new mysqli($hostname, $username, $password, $database);
+    } catch(Exception $ex) {
+        die("Falha ao conectar-se com o banco de dados: ". " [Excpetion: " .$ex ."]");
     }
 ?>
