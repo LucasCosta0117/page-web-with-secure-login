@@ -12,5 +12,6 @@
 <body>
     <h1>PÁGINA HOME!</h1>
     <p>Bem vindo,  <?php echo $_SESSION['name'];?>!</p>
+    <span><a href="../controller/services/logout.php">Sair</a></span>
 </body>
 </html>
