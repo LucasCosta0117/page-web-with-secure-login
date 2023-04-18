@@ -1,8 +1,5 @@
-<?php
-    include_once './controller/services/login.php';
-?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,14 +11,18 @@
     <p>Para continuar realize seu Login.</p>
 
     <form method="post" action="./controller/services/login.php">
-        <label for="email">Email: </label>
-        <input type="email" id="email" name="email" placeholder="email@exemple.com">
-        <label for="pass">Senha: </label>
-        <input type="password" id="pass" name="pass">
+        <div class="formInput">
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" placeholder="email@exemple.com">
+        </div>
+        <div class="formInput">
+            <label for="pass">Senha: </label>
+            <input type="password" id="pass" name="pass">
+        </div>
         <button type="submit">Entrar</button>
     </form>
 
-    <a href="">
+    <a href="./view/cadastrarusuario.php">
         <span class="linkcadastro">Criar cadastro</span>
     </a>
     <a href="">
